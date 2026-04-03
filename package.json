@@ -1,0 +1,14 @@
+{
+  "name": "vikas-website",
+  "version": "1.0.0",
+  "description": "Personal portfolio and thought-leadership website",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
