@@ -4,11 +4,12 @@
 - **Name**: Vikas Choudhary
 - **Email**: vikaschoudhary699@gmail.com
 - **Phone**: +91 8199078013
-- **Location**: Ambala City
+- **Origin**: Born in Bihar, educated in Haryana
+- **Location**: Delhi (based)
 - **LinkedIn**: https://www.linkedin.com/in/vikas-choudhary-3a7a85149/
 - **Industry**: Development sector / NGO.
 - **Expertise**: STEM Education, Robotics, Teacher Training, Content Development.
-- **Current Role**: Program Manager, Pratham Education Foundation (2024 – Present) — leading the Maharashtra project (Mazi Shala, Maza Swabhiman).
+- **Current Role**: Program Manager, Pratham Education Foundation (2024 – Present) — leading the Maharashtra project (Majhi Shala, Majha Swabhimaan).
 - **Previous Role**: STEM Resource Person, American India Foundation (Nov 2022 – 2024).
 - **Education**: M.A. Hindi Literature, Kurukshetra University (2020–2022); B.Sc. Medical, Kurukshetra University (2017–2020).
 - **Skills**: STEM Education & Robotics, AI & Block Coding, Documentation & Donor Reporting, Training & Facilitation, Content Development, Program Development & Management, Stakeholder Development.

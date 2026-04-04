@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vikas Choudhary | Program Manager, Education & Development</title>
-  <meta name="description" content="Personal website of Vikas Choudhary, Program Manager at Pratham Education Foundation, Maharashtra. Thoughts, work, and writings on education, tribal schools, and social impact." />
-  <meta name="author" content="Vikas Choudhary" />
+  <title data-i18n="meta_title">Vikas Choudhary | Program Manager, Education & Development</title>
+  <meta name="description" content="Personal website of Vikas Choudhary, Program Manager at Pratham Education Foundation, Maharashtra. Thoughts, work, and writings on education, tribal schools, and social impact." data-i18n-content="meta_desc" />
+  <meta name="author" content="Vikas Choudhary" data-i18n-content="meta_author" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Vikas Choudhary | Program Manager, Education & Development" />
@@ -15,7 +15,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Sans+Devanagari:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="/styles/index.css" />
@@ -27,18 +27,28 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="navbar__inner">
-      <a href="#" class="navbar__logo" id="nav-logo">Vikas Choudhary</a>
-      <button class="navbar__hamburger" id="nav-hamburger" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <a href="#" class="navbar__logo" id="nav-logo" data-i18n="nav_logo">Vikas Choudhary</a>
+      
+      <div class="navbar__actions">
+        <div class="lang-switcher" id="lang-switcher">
+          <button class="lang-btn" onclick="switchLanguage('en')" data-lang="en">EN</button>
+          <span class="lang-divider">/</span>
+          <button class="lang-btn" onclick="switchLanguage('hi')" data-lang="hi">HI</button>
+        </div>
+        
+        <button class="navbar__hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" data-i18n-aria="nav_toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
       <ul class="navbar__links" id="nav-links">
-        <li><a href="#home" class="navbar__link active" data-section="home">Home</a></li>
-        <li><a href="#work" class="navbar__link" data-section="work">Work</a></li>
-        <li><a href="#writing" class="navbar__link" data-section="writing">Writing</a></li>
-        <li><a href="#thoughts" class="navbar__link" data-section="thoughts">Thoughts</a></li>
-        <li><a href="#contact" class="navbar__link" data-section="contact">Contact</a></li>
+        <li><a href="#home" class="navbar__link active" data-section="home" data-i18n="nav_home">Home</a></li>
+        <li><a href="#work" class="navbar__link" data-section="work" data-i18n="nav_work">Work</a></li>
+        <li><a href="#writing" class="navbar__link" data-section="writing" data-i18n="nav_writing">Writing</a></li>
+        <li><a href="#thoughts" class="navbar__link" data-section="thoughts" data-i18n="nav_thoughts">Thoughts</a></li>
+        <li><a href="#contact" class="navbar__link" data-section="contact" data-i18n="nav_contact">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -49,7 +59,7 @@
     <!-- ========== HOME / HERO ========== -->
     <section id="home" class="section section--hero">
       <div class="container">
-        <span class="section-label">Program Manager · Education & Development</span>
+        <span class="section-label" data-i18n="hero_label">Program Manager · Education & Development</span>
 
         <div class="hero__photo-wrapper">
           <img
@@ -61,39 +71,39 @@
         </div>
 
         <div class="hero__bio">
-          <p>
+          <p data-i18n="hero_bio_1">
             I'm a Program Manager at Pratham Education Foundation, working on a state-level initiative to improve learning outcomes in government tribal residential schools across Maharashtra. The program covers 500+ schools and involves everyone from Class 1 students learning to read their first word to government officials deciding how assessments get reported.
           </p>
-          <p>
+          <p data-i18n="hero_bio_2">
             Most of what I do is unglamorous: reviewing data, visiting schools, troubleshooting implementation failures, and having the same conversations with teachers and superintendents until something actually changes. I find that more interesting than the version of this work that looks good in slide decks.
           </p>
-          <p>
-            Before this I worked in STEM education and community outreach. I'm from Haryana, based in Maharashtra, and have a postgraduate degree in Hindi literature. This academic background turns out to be surprisingly useful in the field.
+          <p data-i18n="hero_bio_3">
+            Before this I worked in STEM education and community outreach. Born in Bihar, educated in Haryana, and based in Delhi — I have a postgraduate degree in Hindi literature. This academic background turns out to be surprisingly useful in the field.
           </p>
         </div>
 
         <div class="impact-stats">
           <div class="impact-stat">
-            <div class="impact-stat__number">500+</div>
-            <div class="impact-stat__label">Schools</div>
+            <div class="impact-stat__number" data-i18n="stat_schools_num">500+</div>
+            <div class="impact-stat__label" data-i18n="stat_schools_label">Schools</div>
           </div>
           <div class="impact-stat">
-            <div class="impact-stat__number">8,500+</div>
-            <div class="impact-stat__label">Students Assessed</div>
+            <div class="impact-stat__number" data-i18n="stat_students_num">8,500+</div>
+            <div class="impact-stat__label" data-i18n="stat_students_label">Students Assessed</div>
           </div>
           <div class="impact-stat">
-            <div class="impact-stat__number">4</div>
-            <div class="impact-stat__label">Divisions</div>
+            <div class="impact-stat__number" data-i18n="stat_divisions_num">4</div>
+            <div class="impact-stat__label" data-i18n="stat_divisions_label">Divisions</div>
           </div>
           <div class="impact-stat">
-            <div class="impact-stat__number">3 Yrs</div>
-            <div class="impact-stat__label">Program Duration</div>
+            <div class="impact-stat__number" data-i18n="stat_duration_num">3 Yrs</div>
+            <div class="impact-stat__label" data-i18n="stat_duration_label">Program Duration</div>
           </div>
         </div>
 
         <div class="now-block">
-          <div class="now-block__label">Currently</div>
-          <p class="now-block__text">Leading Year 3 of <em>Mazi Shala, Maza Swabhiman</em>. We are focusing on midline assessments across 8,500+ students, Intense Catch-Up pilots in 36 schools, and building a live monitoring dashboard for 455+ Ashramshalas in Maharashtra.</p>
+          <div class="now-block__label" data-i18n="currently_label">Currently</div>
+          <p class="now-block__text" data-i18n="currently_text">Leading Year 3 of <em>Majhi Shala, Majha Swabhimaan</em>. We are focusing on midline assessments across 8,500+ students, Intense Catch-Up pilots in 36 schools, and building a live monitoring dashboard for 455+ Ashramshalas in Maharashtra.</p>
         </div>
 
       </div>
@@ -102,8 +112,8 @@
     <!-- ========== WORK / PORTFOLIO ========== -->
     <section id="work" class="section">
       <div class="container">
-        <span class="section-label">Work</span>
-        <p class="section-intro">
+        <span class="section-label" data-i18n="work_label">Work</span>
+        <p class="section-intro" data-i18n="work_intro">
           What I've been building, field-testing, and occasionally course-correcting.
         </p>
 
@@ -111,14 +121,14 @@
 
           <article class="work-item" id="work-1">
             <div class="work-item__header">
-              <h3 class="work-item__title">Pratham Education Foundation</h3>
-              <span class="work-item__date">2024 – Present</span>
+              <h3 class="work-item__title" data-i18n="work_1_title">Pratham Education Foundation</h3>
+              <span class="work-item__date" data-i18n="work_1_date">2024 – Present</span>
             </div>
-            <p class="work-item__role">Program Manager, Maharashtra</p>
-            <p class="work-item__desc">
-              <em>Mazi Shala, Maza Swabhiman</em> is a 3-year initiative to improve foundational learning outcomes in 500+ government tribal residential schools across four divisions of Maharashtra. I run the program, actively overseeing assessment design, teacher training, field team coordination, government liaison, and a live data dashboard for 455+ schools simultaneously.
+            <p class="work-item__role" data-i18n="work_1_role">Program Manager, Maharashtra</p>
+            <p class="work-item__desc" data-i18n="work_1_desc_1">
+              <em>Majhi Shala, Majha Swabhimaan</em> is a 3-year initiative to improve foundational learning outcomes in 500+ government tribal residential schools across four divisions of Maharashtra. I run the program, actively overseeing assessment design, teacher training, field team coordination, government liaison, and a live data dashboard for 455+ schools simultaneously.
             </p>
-            <p class="work-item__desc">
+            <p class="work-item__desc" data-i18n="work_1_desc_2">
               The hardest part isn't the scale. It's ensuring that what gets implemented on the ground actually matches what was designed. A training workshop is easy to run. The real challenge lies in getting 500 schools to change their teaching practices and systematically verifying those improvements.
             </p>
             <div class="work-item__tags">
@@ -132,11 +142,11 @@
 
           <article class="work-item" id="work-2">
             <div class="work-item__header">
-              <h3 class="work-item__title">American India Foundation</h3>
-              <span class="work-item__date">Nov 2022 – 2024</span>
+              <h3 class="work-item__title" data-i18n="work_2_title">American India Foundation</h3>
+              <span class="work-item__date" data-i18n="work_2_date">Nov 2022 – 2024</span>
             </div>
-            <p class="work-item__role">STEM Resource Person</p>
-            <p class="work-item__desc">
+            <p class="work-item__role" data-i18n="work_2_role">STEM Resource Person</p>
+            <p class="work-item__desc" data-i18n="work_2_desc">
               Designed and delivered technology education programs covering robotics, AI, block coding, and Scratch in schools that previously lacked these subjects. Also built the training content necessary for field teams and teachers to sustain the curriculum after my visits. The main difficulty was making these sessions genuinely engaging in classrooms with no reliable power supply and students who had never used a computer.
             </p>
             <div class="work-item__tags">
@@ -149,11 +159,11 @@
 
           <article class="work-item" id="work-3">
             <div class="work-item__header">
-              <h3 class="work-item__title">District Administration &amp; Manthan Foundation</h3>
-              <span class="work-item__date">Jul 2020 – May 2022</span>
+              <h3 class="work-item__title" data-i18n="work_3_title">District Administration &amp; Manthan Foundation</h3>
+              <span class="work-item__date" data-i18n="work_3_date">Jul 2020 – May 2022</span>
             </div>
-            <p class="work-item__role">Awareness Campaign Lead · Theatre Artist</p>
-            <p class="work-item__desc">
+            <p class="work-item__role" data-i18n="work_3_role">Awareness Campaign Lead · Theatre Artist</p>
+            <p class="work-item__desc" data-i18n="work_3_desc">
               Coordinated community awareness campaigns on public health and civic rights alongside local officials across the district. In parallel, I worked as a street theatre artist with Manthan Foundation. We used performance art to reach rural audiences often missed by conventional outreach strategies. This experience taught me that the most effective communication relies on meeting people exactly where they are.
             </p>
             <div class="work-item__tags">
@@ -165,11 +175,11 @@
 
           <article class="work-item" id="work-4">
             <div class="work-item__header">
-              <h3 class="work-item__title">Kurukshetra University — NSS</h3>
-              <span class="work-item__date">May 2019 – May 2020</span>
+              <h3 class="work-item__title" data-i18n="work_4_title">Kurukshetra University — NSS</h3>
+              <span class="work-item__date" data-i18n="work_4_date">May 2019 – May 2020</span>
             </div>
-            <p class="work-item__role">Vice President, National Service Scheme</p>
-            <p class="work-item__desc">
+            <p class="work-item__role" data-i18n="work_4_role">Vice President, National Service Scheme</p>
+            <p class="work-item__desc" data-i18n="work_4_desc">
               Ran the university's NSS unit: student volunteers, community projects, Unnat Bharat Survey, Swachh Bharat internship. My first real exposure to coordinating people toward a shared goal in conditions where nothing is guaranteed. More formative than it sounds.
             </p>
             <div class="work-item__tags">
@@ -186,8 +196,8 @@
     <!-- ========== WRITING ========== -->
     <section id="writing" class="section">
       <div class="container">
-        <span class="section-label">Writing</span>
-        <p class="section-intro">
+        <span class="section-label" data-i18n="writing_label">Writing</span>
+        <p class="section-intro" data-i18n="writing_intro">
           Long-form pieces on education, program design, and what the field actually looks like. All opinions are my own.
         </p>
 
@@ -195,10 +205,10 @@
 
           <article class="blog-item" id="blog-1">
             <div class="blog-item__header">
-              <h3 class="blog-item__title">What 8,575 Assessments Taught Me About Learning Gaps in Tribal Schools</h3>
-              <span class="blog-item__date">March 2026</span>
+              <h3 class="blog-item__title" data-i18n="blog_1_title">What 8,575 Assessments Taught Me About Learning Gaps in Tribal Schools</h3>
+              <span class="blog-item__date" data-i18n="blog_1_date">March 2026</span>
             </div>
-            <p class="blog-item__excerpt">
+            <p class="blog-item__excerpt" data-i18n="blog_1_excerpt">
               When our team completed midline assessments for over 8,500 students across ashram schools in Maharashtra, the data was both sobering and hopeful. Reading proficiency at the Story level jumped from 14% to 35%, marking a significant learning gain. However, the journey to achieve this revealed something far more important than any metric. The gap between what children are taught and what they actually understand is much wider than most program reports admit. Here's what I observed on the ground, and why honest assessment design is more important than building impressive dashboards.
             </p>
             <div class="blog-item__meta">
@@ -207,15 +217,15 @@
               <span class="tag">Tribal Education</span>
               <span class="blog-item__read-time">7 min</span>
             </div>
-            <a href="/blog/fln-assessments.html" class="blog-item__read-more">Read more →</a>
+            <a href="/blog/fln-assessments.html" class="blog-item__read-more" data-i18n="blog_read_more">Read more →</a>
           </article>
 
           <article class="blog-item" id="blog-2">
             <div class="blog-item__header">
-              <h3 class="blog-item__title">Why a Wooden Abacus Still Beats a Spreadsheet in the Classroom</h3>
-              <span class="blog-item__date">February 2026</span>
+              <h3 class="blog-item__title" data-i18n="blog_2_title">Why a Wooden Abacus Still Beats a Spreadsheet in the Classroom</h3>
+              <span class="blog-item__date" data-i18n="blog_2_date">February 2026</span>
             </div>
-            <p class="blog-item__excerpt">
+            <p class="blog-item__excerpt" data-i18n="blog_2_excerpt">
               I've seen a lot of education technology pitches for tablets, learning apps, and AI tutors. Yet some of my most memorable classroom moments from field visits to ashram schools in Amravati and Nashik involved a simple abacus, a set of 3D alphabet letters, and children who couldn't sit still because they were fully engaged in learning. Teaching Learning Materials (TLM) rarely get enough credit in policy conversations. This post explores what hands-on, activity-based learning looks like in practice, along with the specific teacher support required to sustain it.
             </p>
             <div class="blog-item__meta">
@@ -224,15 +234,15 @@
               <span class="tag">Activity-Based Learning</span>
               <span class="blog-item__read-time">5 min</span>
             </div>
-            <a href="/blog/abacus-vs-spreadsheet.html" class="blog-item__read-more">Read more →</a>
+            <a href="/blog/abacus-vs-spreadsheet.html" class="blog-item__read-more" data-i18n="blog_read_more">Read more →</a>
           </article>
 
           <article class="blog-item" id="blog-3">
             <div class="blog-item__header">
-              <h3 class="blog-item__title">The Catch-Up Problem: Reaching Children Who Fell Behind Before We Arrived</h3>
-              <span class="blog-item__date">January 2026</span>
+              <h3 class="blog-item__title" data-i18n="blog_3_title">The Catch-Up Problem: Reaching Children Who Fell Behind Before We Arrived</h3>
+              <span class="blog-item__date" data-i18n="blog_3_date">January 2026</span>
             </div>
-            <p class="blog-item__excerpt">
+            <p class="blog-item__excerpt" data-i18n="blog_3_excerpt">
               A Class 6 student who cannot read a paragraph hasn't failed. Instead, the system successfully passed them along without ensuring foundational skills were built between Class 1 and now. The Catch-Up Course we've been rolling out across 500+ tribal residential schools in Maharashtra operates on a simple but radical premise: meet children exactly where they are rather than where the syllabus assumes they should be. Scaling this initiative across four divisions has taught me exactly what remedial education demands of teachers, field teams, and the institutions funding these programs.
             </p>
             <div class="blog-item__meta">
@@ -241,7 +251,7 @@
               <span class="tag">TaRL</span>
               <span class="blog-item__read-time">6 min</span>
             </div>
-            <a href="/blog/catch-up-problem.html" class="blog-item__read-more">Read more →</a>
+            <a href="/blog/catch-up-problem.html" class="blog-item__read-more" data-i18n="blog_read_more">Read more →</a>
           </article>
 
         </div>
@@ -251,46 +261,46 @@
     <!-- ========== THOUGHTS ========== -->
     <section id="thoughts" class="section">
       <div class="container">
-        <span class="section-label">Thoughts</span>
-        <p class="section-intro">
+        <span class="section-label" data-i18n="thoughts_label">Thoughts</span>
+        <p class="section-intro" data-i18n="thoughts_intro">
           Shorter reflections on the education and development sector — things I've been thinking about, questioning, or learning.
         </p>
 
         <div class="thoughts-list">
 
           <blockquote class="thought-item" id="thought-1">
-            <p>
+            <p data-i18n="thought_1_text">
               "A child who can't read a paragraph by Class 6 isn't a slow learner. They are simply a student that the system moved forward without verifying foundation readiness. The core problem is structural rather than individual."
             </p>
             <footer class="thought-item__footer">
-              <span class="thought-item__date">March 2026</span>
+              <span class="thought-item__date" data-i18n="thought_1_date">March 2026</span>
             </footer>
           </blockquote>
 
           <blockquote class="thought-item" id="thought-2">
-            <p>
+            <p data-i18n="thought_2_text">
               "The most powerful teaching tool in a tribal school isn't a digital tablet. It's an educator who believes the child in front of them is capable of learning, backed by the proper skills and materials to make it happen."
             </p>
             <footer class="thought-item__footer">
-              <span class="thought-item__date">February 2026</span>
+              <span class="thought-item__date" data-i18n="thought_2_date">February 2026</span>
             </footer>
           </blockquote>
 
           <blockquote class="thought-item" id="thought-3">
-            <p>
+            <p data-i18n="thought_3_text">
               "We frequently discuss data-driven programs, but data is only ever as honest as the actual field conditions that produced it. Prioritize building genuine trust with your field teams first, and accurate numbers will naturally follow."
             </p>
             <footer class="thought-item__footer">
-              <span class="thought-item__date">January 2026</span>
+              <span class="thought-item__date" data-i18n="thought_3_date">January 2026</span>
             </footer>
           </blockquote>
 
           <blockquote class="thought-item" id="thought-4">
-            <p>
+            <p data-i18n="thought_4_text">
               "Scale without quality is just organized failure. The BOT model works only when what you're transferring is genuinely owned by the people who will sustain it."
             </p>
             <footer class="thought-item__footer">
-              <span class="thought-item__date">December 2025</span>
+              <span class="thought-item__date" data-i18n="thought_4_date">December 2025</span>
             </footer>
           </blockquote>
 
@@ -301,23 +311,23 @@
     <!-- ========== CONTACT ========== -->
     <section id="contact" class="section">
       <div class="container">
-        <span class="section-label">Contact</span>
-        <p class="section-intro">
+        <span class="section-label" data-i18n="contact_label">Contact</span>
+        <p class="section-intro" data-i18n="contact_intro">
           I'm always open to conversations about education, development practice, and collaboration opportunities. Feel free to reach out.
         </p>
 
         <div class="contact-email">
-          <span class="section-label section-label--sub">Email</span>
+          <span class="section-label section-label--sub" data-i18n="contact_email_label">Email</span>
           <a href="mailto:vikaschoudhary699@gmail.com" class="contact-email__link" id="contact-email">vikaschoudhary699@gmail.com</a>
         </div>
 
         <div class="contact-elsewhere">
-          <span class="section-label section-label--sub">Elsewhere</span>
+          <span class="section-label section-label--sub" data-i18n="contact_elsewhere_label">Elsewhere</span>
 
           <a href="https://www.linkedin.com/in/vikas-choudhary-3a7a85149/" class="elsewhere-card" id="contact-linkedin" target="_blank" rel="noopener noreferrer">
             <div class="elsewhere-card__info">
-              <h3 class="elsewhere-card__title">LinkedIn</h3>
-              <p class="elsewhere-card__desc">Professional updates and connections</p>
+              <h3 class="elsewhere-card__title" data-i18n="linkedin_title">LinkedIn</h3>
+              <p class="elsewhere-card__desc" data-i18n="linkedin_desc">Professional updates and connections</p>
             </div>
             <span class="elsewhere-card__arrow">→</span>
           </a>
@@ -331,15 +341,16 @@
   <!-- Footer -->
   <footer class="footer" id="footer">
     <div class="container">
-      <p class="footer__copy">© 2026 Vikas Choudhary</p>
-      <p class="footer__edu">M.A. Hindi Literature &amp; B.Sc. (Medical) at Kurukshetra University</p>
+      <p class="footer__copy" data-i18n="footer_copy">© 2026 Vikas Choudhary</p>
+      <p class="footer__edu" data-i18n="footer_edu">M.A. Hindi Literature &amp; B.Sc. (Medical) at Kurukshetra University</p>
       <div class="footer__links">
-        <a href="https://www.linkedin.com/in/vikas-choudhary-3a7a85149/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/vikas-choudhary-3a7a85149/" target="_blank" rel="noopener noreferrer" data-i18n="footer_linkedin">LinkedIn</a>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
+  <script type="module" src="/scripts/i18n.js"></script>
   <script type="module" src="/scripts/main.js"></script>
 </body>
 </html>
