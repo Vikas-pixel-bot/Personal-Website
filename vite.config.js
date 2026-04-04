@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite';
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   root: '.',
   publicDir: false,
-  base: command === 'build' ? '/Personal-Website/' : '/',
+  base: process.env.VITE_BASE_PATH || '/',
   server: {
     port: 5173,
     open: true
   }
-}));
+});
