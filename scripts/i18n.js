@@ -22,8 +22,8 @@ class I18n {
   async loadTranslations(lang) {
     if (this.translations[lang]) return;
     try {
-      const response = await fetch(`/locales/${lang}.json`);
-      this.translations[lang] = await response.json();
+      const module = await import(`../locales/${lang}.json`);
+      this.translations[lang] = module.default;
     } catch (error) {
       console.error(`Failed to load translations for ${lang}:`, error);
     }
