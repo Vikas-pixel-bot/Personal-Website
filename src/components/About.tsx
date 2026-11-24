@@ -4,11 +4,13 @@ import { EASE, SectionHeading, Tilt } from './fx';
 
 export default function About() {
   const facts = [
-    { k: 'Current Role', v: 'Program Manager · Pratham', s: 'Majhi Shala, Majha Swabhimaan (500+ Schools)' },
-    { k: 'Field Scale', v: '50,000+ Assessed', s: '455+ Live Dashboards · 4 Divisions' },
-    { k: 'Team Managed', v: '58 Field Leaders', s: 'Coordinators, Resource Persons & Shiksha Mitras' },
-    { k: 'Curricula', v: 'CASEL & NIPUN Frameworks', s: 'Happiness Curriculum · 48-Day FLN · Science Manuals' },
-    { k: 'Academic Grounding', v: 'PG in Hindi Literature', s: 'Kurukshetra University · Distinction' },
+    { k: 'Current Role', v: 'Program Manager · Pratham', s: 'Majhi Shala, Majha Swabhimaan (500 Schools)' },
+    { k: 'Field Scale', v: '50,000+ Assessed', s: 'Nashik, Thane, Nagpur & Amravati Divisions' },
+    { k: 'Team Managed', v: '60 Field Staff', s: 'Coordinators, Trainers & Program Associates' },
+    { k: 'EdTech & AI', v: 'AI FLN Platform & Offline Tool', s: 'Vibecoded assessment engine & interactive FLN games' },
+    { k: 'Curricula', v: 'FLN Catch-Up & Science Kits', s: '48-Day Course (500 Schools) · Gurushala Kit (<₹2500)' },
+    { k: 'Academic Roots', v: 'B.Sc. & M.A. in Hindi Lit', s: 'Kurukshetra University · Dual Science & Arts Grounding' },
+    { k: 'Govt Liaison', v: '29 Project Officers (17 IAS)', s: '29 APOs & Tribal Development Department' },
     { k: 'Grassroots', v: '100+ Street Plays & NSS VP', s: 'Manthan Foundation · Unnat Bharat Abhiyan' },
   ];
 

@@ -1,6 +1,6 @@
 import { lazy, Suspense, useCallback, useEffect, useState, type ReactNode } from 'react';
 import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
-import { viewerProfiles, type ProfileId, type Project, type SectionId } from './data/portfolio';
+import { viewerProfiles, type FieldNote, type ProfileId, type Project, type SectionId } from './data/portfolio';
 import { SmoothScrollProvider, useSmoothScroll } from './hooks/smoothScroll';
 import CustomCursor from './components/CustomCursor';
 import OpeningSequence from './components/OpeningSequence';
@@ -12,6 +12,7 @@ import Scene from './components/Scene';
 import About from './components/About';
 import Seasons from './components/Seasons';
 import Originals from './components/Originals';
+import Dispatches from './components/Dispatches';
 import TopPicks from './components/TopPicks';
 import Skills from './components/Skills';
 import Achievements from './components/Achievements';
@@ -22,6 +23,7 @@ import { EASE } from './components/fx';
 // Overlays are lazy-loaded on demand
 const PlayIntro = lazy(() => import('./components/PlayIntro'));
 const ProjectModal = lazy(() => import('./components/ProjectModal'));
+const DispatchModal = lazy(() => import('./components/DispatchModal'));
 const ResumeModal = lazy(() => import('./components/ResumeModal'));
 
 type Stage = 'opening' | 'profiles' | 'home';
@@ -51,6 +53,7 @@ function Series() {
   const [profileId, setProfileId] = useState<ProfileId>(stored ?? 'vikas');
   const [playing, setPlaying] = useState(false);
   const [project, setProject] = useState<Project | null>(null);
+  const [selectedNote, setSelectedNote] = useState<FieldNote | null>(null);
   const [resumeOpen, setResumeOpen] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const { scrollTo, lock, unlock } = useSmoothScroll();
@@ -91,12 +94,14 @@ function Series() {
 
   const closeIntro = useCallback(() => setPlaying(false), []);
   const closeProject = useCallback(() => setProject(null), []);
+  const closeNote = useCallback(() => setSelectedNote(null), []);
   const closeResume = useCallback(() => setResumeOpen(false), []);
 
   const sections: Record<SectionId, ReactNode> = {
     about: <About />,
     journey: <Seasons />,
     originals: <Originals onOpen={setProject} />,
+    dispatches: <Dispatches onOpen={setSelectedNote} />,
     picks: <TopPicks />,
     skills: <Skills />,
     moments: <Achievements />,
@@ -132,6 +137,7 @@ function Series() {
       <Suspense fallback={null}>
         <AnimatePresence>{playing && <PlayIntro key="intro" onClose={closeIntro} />}</AnimatePresence>
         <AnimatePresence>{project && <ProjectModal key="project" project={project} onClose={closeProject} onSwitch={setProject} />}</AnimatePresence>
+        <AnimatePresence>{selectedNote && <DispatchModal key="dispatch" note={selectedNote} onClose={closeNote} onSwitch={setSelectedNote} />}</AnimatePresence>
         <AnimatePresence>{resumeOpen && <ResumeModal key="resume" onClose={closeResume} />}</AnimatePresence>
       </Suspense>
 

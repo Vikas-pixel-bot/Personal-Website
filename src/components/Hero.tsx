@@ -35,17 +35,17 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
   const glowX = useTransform(px, [-1, 1], ['-6%', '6%']);
 
   const meta = [
-    '2024 – Present',
+    'Apr 2025 – Present',
     'Pratham Maharashtra',
     '50,000+ Assessed',
-    'Team of 58',
-    '500+ Ashramshalas',
+    'Team of 60',
+    '29 IAS/State POs',
   ];
 
   const floating = [
     { text: '50,000+ Students', sub: 'FLN Diagnostic Assessments', pos: 'left-[2%] top-[30%]', depth: 1 },
-    { text: '455+ Live Dashboards', sub: 'Real-Time School Telemetry', pos: 'right-[1%] top-[18%]', depth: -1 },
-    { text: '58 Team Members', sub: '4 Administrative Divisions', pos: 'right-[4%] bottom-[24%]', depth: 0.6 },
+    { text: 'AI Offline Tool', sub: 'Low-Connectivity Schools', pos: 'right-[1%] top-[18%]', depth: -1 },
+    { text: 'Team of 60', sub: 'Nashik, Thane, Nagpur, Amravati', pos: 'right-[4%] bottom-[24%]', depth: 0.6 },
   ];
 
   return (

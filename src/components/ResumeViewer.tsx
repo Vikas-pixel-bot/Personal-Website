@@ -22,7 +22,7 @@ export default function ResumeSection({ onView }: { onView: () => void }) {
         <div className="lg:sticky lg:top-28 lg:self-start">
           <p className="font-serif text-3xl italic leading-tight text-bone">Every milestone, verified.</p>
           <p className="mt-3 text-sm leading-relaxed text-mist">
-            State-level program leadership, 50,000+ student evaluations, team management of 58 staff, and curriculum authorship across CASEL & NIPUN frameworks.
+            5+ years in education and the social sector: 50,000+ student evaluations, leadership of a 60-member field force, strategic liaison with 29 Project Officers (17 IAS), and AI-driven EdTech tools.
           </p>
           <div className="mt-6 flex flex-col gap-3">
             <Magnetic className="w-full">
@@ -49,8 +49,8 @@ export default function ResumeSection({ onView }: { onView: () => void }) {
           <dl className="mt-8 grid grid-cols-3 gap-px overflow-hidden rounded-xl bg-white/10 text-center">
             {[
               { v: '50k+', k: 'Assessed' },
-              { v: '58', k: 'Team Lead' },
-              { v: '500+', k: 'Schools' },
+              { v: '60', k: 'Team Lead' },
+              { v: '500', k: 'Schools' },
             ].map((s) => (
               <div key={s.k} className="bg-ink-2 px-2 py-4">
                 <dd className="font-display text-3xl leading-none text-bone">{s.v}</dd>
@@ -68,7 +68,7 @@ function CollapsibleSheet() {
   const [open, setOpen] = useState(false);
   return (
     <div className="relative">
-      <div className={`overflow-hidden transition-[max-height] duration-700 ease-[var(--ease-cine)] md:max-h-none ${open ? 'max-h-[4000px]' : 'max-h-[560px]'}`}>
+      <div className={`overflow-hidden transition-[max-height] duration-700 ease-[var(--ease-cine)] md:max-h-none ${open ? 'max-h-[4500px]' : 'max-h-[580px]'}`}>
         <ResumeSheet />
       </div>
       {!open && (
@@ -94,41 +94,36 @@ export function ResumeSheet() {
         <div>
           <p className="text-[10px] font-bold tracking-[0.34em] text-smoke">CURRICULUM VITAE</p>
           <h3 className="mt-1 font-display text-[clamp(1.9rem,4.4vw,3.2rem)] leading-[0.9] tracking-wide text-bone">{profile.fullName}</h3>
-          <p className="mt-1 text-xs text-mist">{profile.role}</p>
+          <p className="mt-1 text-xs text-crimson-2 font-semibold tracking-wider">{profile.role}</p>
         </div>
-        <div className="text-xs leading-relaxed text-mist sm:text-right">
-          <a href={`mailto:${profile.email}`} className="block hover:text-bone">
+        <div className="text-xs leading-relaxed text-mist sm:text-right space-y-0.5">
+          <p className="text-bone">{profile.phone}</p>
+          <a href={`mailto:${profile.email}`} className="block text-bone hover:underline">
             {profile.email}
           </a>
-          <p className="mt-0.5">{profile.location}</p>
-          <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="mt-0.5 inline-block text-crimson-2 hover:underline">
-            LinkedIn Profile ↗
-          </a>
+          <p>{profile.location}</p>
+          <div className="flex gap-3 sm:justify-end pt-1">
+            <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="text-crimson-2 hover:underline">
+              LinkedIn ↗
+            </a>
+            <span className="text-smoke">·</span>
+            <a href={profile.links.website} target="_blank" rel="noreferrer" className="text-crimson-2 hover:underline">
+              vikaschoudhary.vercel.app ↗
+            </a>
+          </div>
         </div>
       </header>
 
       <div className="grid gap-10 lg:grid-cols-2">
         <div>
-          <H>Education</H>
-          {education.map((e) => (
-            <div key={e.degree} className="mb-4">
-              <p className="text-sm font-semibold text-bone">{e.degree}</p>
-              <p className="text-xs text-mist">{e.school}, {e.place}</p>
-              <div className="mt-1 flex items-center justify-between text-xs text-smoke">
-                <span>{e.period}</span>
-                <span className="font-semibold text-bone">{e.score}</span>
-              </div>
-            </div>
-          ))}
-
-          <H>Work Experience</H>
+          <H>Experience</H>
           {experience.map((x) => (
-            <div key={x.company} className="mb-6">
+            <div key={x.company + x.role} className="mb-6">
               <div className="flex flex-wrap justify-between gap-x-3">
                 <p className="text-sm font-semibold text-bone">
-                  {x.company} — <span className="text-mist font-normal">{x.role}</span>
+                  {x.role} <span className="text-mist font-normal">| {x.company}</span>
                 </p>
-                <p className="text-xs text-smoke">{x.period}</p>
+                <p className="text-xs font-semibold text-crimson-2">{x.period}</p>
               </div>
               <p className="text-[11px] text-smoke mt-0.5">{x.place}</p>
               <ul className="mt-2 space-y-1.5">
@@ -142,7 +137,21 @@ export function ResumeSheet() {
             </div>
           ))}
 
-          <H>Flagship Curricula & Programs</H>
+          <H>Education</H>
+          {education.map((e) => (
+            <div key={e.degree} className="mb-4">
+              <p className="text-sm font-semibold text-bone">{e.degree}</p>
+              <p className="text-xs text-mist">{e.school}, {e.place}</p>
+              <div className="mt-1 flex items-center justify-between text-xs text-smoke">
+                <span>{e.period}</span>
+                <span className="font-semibold text-bone">{e.score}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div>
+          <H>Flagship Curricula & Platforms</H>
           {projects.map((p) => (
             <div key={p.id} className="mb-4">
               <div className="flex flex-wrap justify-between gap-x-3">
@@ -152,10 +161,8 @@ export function ResumeSheet() {
               <p className="text-xs text-mist mt-0.5">{p.logline}</p>
             </div>
           ))}
-        </div>
 
-        <div>
-          <H>Core Competencies</H>
+          <H>Competencies & Skill Domains</H>
           <div className="space-y-3">
             {skillCategories.map((c) => (
               <div key={c.id}>
@@ -167,8 +174,22 @@ export function ResumeSheet() {
             ))}
           </div>
 
-          <H>Laurels & Recognition</H>
-          <ul className="space-y-3">
+          <H>Technical & AI Toolset</H>
+          <div className="space-y-2 text-xs text-mist">
+            <p><span className="font-semibold text-bone">AI & Vibecoding:</span> Claude, Claude Code, Antigravity, offline-first development, gamified learning engines.</p>
+            <p><span className="font-semibold text-bone">Multimodal AI:</span> ChatGPT, Perplexity, ElevenLabs (TTS), Sora, AI summarizers.</p>
+            <p><span className="font-semibold text-bone">EdTech & STEM:</span> Techno-pedagogy, robotics kits, Scratch block-coding, DIET training, Canva, Visme, video editing.</p>
+          </div>
+
+          <H>Languages</H>
+          <div className="text-xs text-mist space-y-1">
+            <p><span className="font-semibold text-bone">English:</span> Professional (read, write, speak)</p>
+            <p><span className="font-semibold text-bone">Hindi:</span> Native (read, write, speak)</p>
+            <p><span className="font-semibold text-bone">Punjabi, Marathi, Gujarati:</span> Beginner</p>
+          </div>
+
+          <H>Key Achievements & Governance</H>
+          <ul className="space-y-2">
             {achievements.map((a) => (
               <li key={a.id} className="text-xs leading-relaxed text-mist">
                 <span className="font-semibold text-bone">
@@ -178,11 +199,6 @@ export function ResumeSheet() {
               </li>
             ))}
           </ul>
-
-          <H>Pedagogical Certifications</H>
-          <p className="text-xs leading-relaxed text-mist">
-            {certifications.map((c) => `${c.issuer}: ${c.name}`).join(' • ')}
-          </p>
         </div>
       </div>
     </article>
