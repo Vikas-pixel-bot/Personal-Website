@@ -1,6 +1,6 @@
 /* ============================================================
-   VIKAS CHOUDHARY — PERSONAL WEBSITE
-   Main JavaScript — Entry Gate, 3 Persona Interfaces & Animations
+   VIKAS CHOUDHARY: PERSONAL WEBSITE
+   Main JavaScript: Entry Gate, 3 Persona Interfaces & Animations
    ============================================================ */
 
 // ── 3 Tailored Persona Interfaces ───────────────────────────
@@ -9,11 +9,11 @@ const PERSONAS = {
     label: 'Recruiter',
     heroLabel: 'Program Manager · Team Leadership, Govt. Liaison & AI EdTech',
     heroBio1:
-      'I lead a 60-member cross-functional field team across four administrative divisions of Maharashtra (Nashik, Thane, Nagpur, Amravati) for Pratham’s <em>Majhi Shala, Majha Swabhimaan</em> partnership with the Tribal Development Department — overseeing 500 residential ashram schools and serving as primary liaison to 29 Project Officers (17 IAS, 12 Non-IAS) and 29 APOs.',
+      'I lead a 60-member cross-functional field team across four administrative divisions of Maharashtra (Nashik, Thane, Nagpur, Amravati) for Pratham’s <em>Majhi Shala, Majha Swabhimaan</em> partnership with the Tribal Development Department, overseeing 500 residential ashram schools and serving as primary liaison to 29 Project Officers (17 IAS, 12 Non-IAS) and 29 APOs.',
     heroBio2:
       'Beyond operational delivery, I architect and ship the pedagogical and technical systems that make scale hold: I authored a 48-Day FLN Catch-Up Course (50,000+ students assessed) and vibecoded an offline-first AI student progress platform with interactive FLN learning games for zero-connectivity zones.',
     heroBio3:
-      'Across 5+ years at Pratham, Gurushala, and American India Foundation, I have built a sub-₹2,500 Everyday Science Kit deployed across 500 schools in 6+ states, trained 3,500+ teachers, and managed multi-state facilitator cohorts — backed by a B.Sc. and an M.A. in Hindi Literature with Distinction.',
+      'Across 5+ years at Pratham, Gurushala, and American India Foundation, I have built a sub-₹2,500 Everyday Science Kit deployed across 500 schools in 6+ states, trained 3,500+ teachers, and managed multi-state facilitator cohorts, backed by a B.Sc. and an M.A. in Hindi Literature with Distinction.',
     stats: [
       { num: '60', label: 'Field Staff Led' },
       { num: '29 POs', label: '17 IAS · 12 Non-IAS' },
@@ -24,7 +24,7 @@ const PERSONAS = {
     currentlyText:
       'Open to Program Leadership, EdTech Product, and Systems Design roles. Currently directing Year 3 scale across 500 Ashram schools, shipping offline AI child-tracking telemetry, and mentoring a 60-person field cadre.',
     workIntro:
-      'Five years of progressive leadership — framed by team scope, institutional ownership, systems shipped, and measurable outcomes.',
+      'Five years of progressive leadership, framed by team scope, institutional ownership, systems shipped, and measurable outcomes.',
     work: {
       1: {
         role: 'Program Manager · 60-Person Team & 500 Schools',
@@ -61,7 +61,7 @@ const PERSONAS = {
       7: {
         role: 'Vice President · National Service Scheme (NSS)',
         desc:
-          'Led a 200+ volunteer unit across Unnat Bharat Abhiyan field surveys and rural literacy drives — building early operational discipline in stakeholder coordination and community execution.',
+          'Led a 200+ volunteer unit across Unnat Bharat Abhiyan field surveys and rural literacy drives, building early operational discipline in stakeholder coordination and community execution.',
       },
     },
     contactIntro:
@@ -76,7 +76,7 @@ const PERSONAS = {
     heroBio2:
       'Most of what I do is unglamorous: reviewing telemetry data, travelling to remote ashramshalas across Nashik, Thane, Nagpur, and Amravati, troubleshooting implementation failures, and holding honest pedagogical conversations with teachers and wardens until something genuinely shifts. I find that far more interesting than the version of this work that looks good in slide decks.',
     heroBio3:
-      'Before this I led hands-on STEM programs across 6+ states and directed 100+ street plays with Manthan Theatre Foundation. Educated at Kurukshetra University with a B.Sc. and an M.A. in Hindi Literature with Distinction — a combination of scientific inquiry and linguistic empathy that proves remarkably useful in the field.',
+      'Before this I led hands-on STEM programs across 6+ states and directed 100+ street plays with Manthan Theatre Foundation. Educated at Kurukshetra University with a B.Sc. and an M.A. in Hindi Literature with Distinction, a combination of scientific inquiry and linguistic empathy that proves remarkably useful in the field.',
     stats: [
       { num: '500', label: 'Ashram Schools' },
       { num: '50,000+', label: 'Students Assessed' },
@@ -87,14 +87,14 @@ const PERSONAS = {
     currentlyText:
       'Leading <em>Majhi Shala, Majha Swabhimaan</em> across 500 Ashram schools in Nashik, Thane, Nagpur, and Amravati. Refining the 48-Day FLN Catch-Up Course (LSRW + TaRL), a CASEL-based Happiness Curriculum, and an AI-powered offline platform to track child-wise growth.',
     workIntro:
-      'Seven roles across five years — what I’ve been building, field-testing, and occasionally course-correcting.',
+      'Seven roles across five years: what I’ve been building, field-testing, and occasionally course-correcting.',
     work: {
       1: {
         role: 'Program Manager · Nashik, Thane, Nagpur & Amravati Divisions',
         desc1:
           'Leading the statewide partnership with the Tribal Development Department (Government of Maharashtra) for the holistic development of 500 Ashram schools, alongside a 60-member field team and 29 Project Officers (17 IAS, 12 Non-IAS) and 29 APOs.',
         desc2:
-          'The hardest part isn’t the scale — it’s ensuring classroom reality matches program design. Developed the 48-day FLN Catch-Up Course (TaRL & LSRW), a CASEL-aligned Happiness Curriculum, and an offline-first AI assessment platform with interactive learning games for zero-signal valleys.',
+          'The hardest part isn’t the scale; it’s ensuring classroom reality matches program design. Developed the 48-day FLN Catch-Up Course (TaRL & LSRW), a CASEL-aligned Happiness Curriculum, and an offline-first AI assessment platform with interactive learning games for zero-signal valleys.',
       },
       2: {
         role: 'Senior Trainer, TCD · National / Multi-State Coordination',
@@ -102,7 +102,7 @@ const PERSONAS = {
           'Reviewed training delivery in real time and mentored 150+ educators. Built FLN and Competency-Based Education toolkits, piloted virtual student camps, and worked with the MME team to turn honest field data into better pedagogy.',
       },
       3: {
-        role: 'Master Trainer – Teacher Development · 6+ States',
+        role: 'Master Trainer, Teacher Development · 6+ States',
         desc:
           'Designed the "Integrating Everyday Science into Classrooms" program for 500 schools across 6+ states. Built a sub-₹2,500 science kit for 100+ experiments using everyday household items and NCERT-mapped manuals for Grades 6–8, travelling 20 days a month to support 3,500+ teachers.',
       },
@@ -124,7 +124,7 @@ const PERSONAS = {
       7: {
         role: 'Vice President, NSS Unit',
         desc:
-          'Coordinated 200+ student volunteers for Unnat Bharat surveys and rural outreach — my first lesson in mobilizing people toward a shared goal when nothing is guaranteed.',
+          'Coordinated 200+ student volunteers for Unnat Bharat surveys and rural outreach: my first lesson in mobilizing people toward a shared goal when nothing is guaranteed.',
       },
     },
     contactIntro:
@@ -150,7 +150,7 @@ const PERSONAS = {
     currentlyText:
       'Open to co-designing and scaling: (1) 48-Day TaRL/LSRW Catch-Up & CASEL SEL curricula for residential/govt. schools, (2) Offline-first AI child telemetry for low-connectivity regions, and (3) Sub-₹2,500 hands-on NCERT Science Labs.',
     workIntro:
-      'Five years of institutional, CSR, and government partnerships — showing where and how we can build together.',
+      'Five years of institutional, CSR, and government partnerships, showing where and how we can build together.',
     work: {
       1: {
         role: 'State Govt. Partnership Lead · 500 Tribal Ashram Schools',
@@ -162,7 +162,7 @@ const PERSONAS = {
       2: {
         role: 'Curriculum & QA Architect · Multi-State Capacity Building',
         desc:
-          'Designed scalable FLN and Competency-Based Education (CBE) toolkits, training QA rubrics, and virtual student engagement models — ensuring pedagogical fidelity when programs expand across regions.',
+          'Designed scalable FLN and Competency-Based Education (CBE) toolkits, training QA rubrics, and virtual student engagement models, ensuring pedagogical fidelity when programs expand across regions.',
       },
       3: {
         role: 'CSR Program Designer · Gurushala (Vodafone Idea & Indus Towers)',
@@ -182,7 +182,7 @@ const PERSONAS = {
       6: {
         role: 'Civic & Community Outreach Partner · DLSA & Local Admin',
         desc:
-          'Partnered with district administration and legal services authorities on 100+ village theatre campaigns — building deep community buy-in before program rollout.',
+          'Partnered with district administration and legal services authorities on 100+ village theatre campaigns, building deep community buy-in before program rollout.',
       },
       7: {
         role: 'University Mobilizer · Unnat Bharat Abhiyan (NSS)',
@@ -222,6 +222,12 @@ function applyPersona(key) {
 
   setText('currently-label', p.currentlyLabel);
   setHTML('currently-text', p.currentlyText);
+
+  const whyTeam = document.getElementById('why-team');
+  if (whyTeam) {
+    whyTeam.hidden = key !== 'recruiter';
+  }
+
   setText('work-intro', p.workIntro);
 
   setText('work-1-role', p.work[1].role);
@@ -253,9 +259,9 @@ function setupEntryGate() {
       // storage unavailable
     }
 
-    // Trigger reveal animations for newly visible Hero elements
+    // Trigger reveal animations for newly visible Hero / Why-Team elements
     requestAnimationFrame(() => {
-      document.querySelectorAll('#home .reveal').forEach(el => el.classList.add('visible'));
+      document.querySelectorAll('#home .reveal, #why-team .reveal').forEach(el => el.classList.add('visible'));
       handleNavbarScroll();
       updateActiveLink();
       if (!scrollToHash) {
@@ -337,6 +343,7 @@ function updateActiveLink() {
   const scrollPos = window.scrollY + 120;
 
   sections.forEach(section => {
+    if (section.hidden) return;
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
     const sectionId = section.getAttribute('id');
