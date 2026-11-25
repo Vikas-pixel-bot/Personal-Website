@@ -122,9 +122,61 @@ document.getElementById('nav-logo').addEventListener('click', (e) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+// ── Audience / Perspective Switcher ─────────────────────────
+function setupAudienceSwitcher() {
+  const tabs = document.querySelectorAll('.audience-tab');
+  const recruiterPanel = document.getElementById('panel-recruiter');
+  const collaboratorPanel = document.getElementById('panel-collaborator');
+  const contactIntro = document.getElementById('contact-intro');
+  if (!tabs.length) return;
+
+  const contactMessages = {
+    visitor: "I'm always open to conversations about education, development practice, and shared learnings from the field. Feel free to reach out.",
+    recruiter: "Looking for a Program Manager or EdTech builder who can lead 60-member field teams, liaise with senior IAS officials, and ship offline-first AI tools? Let's talk.",
+    collaborator: "Interested in partnering on 48-day FLN Catch-Up rollouts, offline child-tracking telemetry, CASEL well-being, or sub-₹2,500 science labs? I'd love to explore what we can build together.",
+  };
+
+  function setAudience(audience) {
+    tabs.forEach(tab => {
+      const active = tab.getAttribute('data-audience') === audience;
+      tab.classList.toggle('active', active);
+      tab.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+
+    if (recruiterPanel) recruiterPanel.hidden = audience !== 'recruiter';
+    if (collaboratorPanel) collaboratorPanel.hidden = audience !== 'collaborator';
+
+    if (contactIntro && document.documentElement.lang !== 'hi' && contactMessages[audience]) {
+      contactIntro.textContent = contactMessages[audience];
+    }
+
+    try {
+      sessionStorage.setItem('vikas_audience', audience);
+    } catch {
+      // storage unavailable
+    }
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      setAudience(tab.getAttribute('data-audience'));
+    });
+  });
+
+  try {
+    const saved = sessionStorage.getItem('vikas_audience');
+    if (saved && ['visitor', 'recruiter', 'collaborator'].includes(saved)) {
+      setAudience(saved);
+    }
+  } catch {
+    // storage unavailable
+  }
+}
+
 // ── Initialize ──────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   setupRevealAnimations();
+  setupAudienceSwitcher();
   handleNavbarScroll();
   updateActiveLink();
 });

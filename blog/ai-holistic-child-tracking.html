@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beyond Averages: Offline-First AI Platform for Holistic Child Tracking — Vikas Choudhary</title>
+  <meta name="description" content="How we built an offline-capable AI assessment platform and interactive FLN games to track individual child trajectories and holistic growth across remote tribal schools." />
+  <meta name="author" content="Vikas Choudhary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/index.css" />
+</head>
+<body>
+  <div class="top-bar" aria-hidden="true"></div>
+
+  <nav class="navbar navbar--scrolled" id="navbar">
+    <div class="navbar__inner">
+      <a href="../index.html" class="navbar__logo">Vikas Choudhary</a>
+      <ul class="navbar__links" id="nav-links">
+        <li><a href="../index.html#home" class="navbar__link">Home</a></li>
+        <li><a href="../index.html#work" class="navbar__link">Work</a></li>
+        <li><a href="../index.html#writing" class="navbar__link active">Writing</a></li>
+        <li><a href="../index.html#thoughts" class="navbar__link">Thoughts</a></li>
+        <li><a href="../index.html#contact" class="navbar__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <section class="section">
+      <div class="container">
+
+        <a href="../index.html#writing" class="blog-post__back">← Back to all writing</a>
+
+        <header class="blog-post__header">
+          <h1 class="blog-post__title">Beyond Averages: Building an Offline-First AI Platform to Track Child-Wise Holistic Growth</h1>
+          <div class="blog-post__meta">
+            <span class="tag">EdTech &amp; AI</span>
+            <span class="tag">Offline-First</span>
+            <span class="tag">Child Telemetry</span>
+            <span class="tag">CASEL SEL</span>
+            <span>7 min read</span>
+          </div>
+        </header>
+
+        <article class="blog-post__content">
+
+          <p>
+            Most education technology is designed with an unspoken assumption: reliable 4G connectivity, modern smartphones, and clean administrative rosters. The moment you step into a remote ashramshala nestled in the forested hills of Gadchiroli, Nandurbar, or Melghat, that assumption collapses. A cloud-dependent dashboard that hangs on a loading spinner in a no-network classroom isn't just inconvenient — it gets abandoned by field teams within a week.
+          </p>
+
+          <p>
+            At the same time, traditional school monitoring suffers from a deeper conceptual flaw: it tracks <strong>aggregate school averages</strong> rather than <strong>individual children</strong>. Knowing that "68% of Class 5 can read" hides the 32% who haven't moved from letter recognition in six months — and tells you nothing about *why* a specific child is stuck.
+          </p>
+
+          <h2>Moving From Vanity Metrics to Child-Wise Trajectories</h2>
+
+          <p>
+            To solve both problems simultaneously, I built an <strong>AI-powered FLN progress platform</strong> paired with an offline-capable assessment tool and built-in interactive learning games. Rather than waiting months for external software vendors, I used AI-assisted vibecoding (with Claude Code and Google Antigravity) to translate weekly field observations into working tools in rapid 48-hour sprints.
+          </p>
+
+          <p>
+            The platform shifts the unit of analysis from the *school* to the *individual child*:
+          </p>
+
+          <ul>
+            <li><strong>Longitudinal FLN Mapping:</strong> Tracking a student's granular step-by-step progression from phonemic decoding and matra recognition to paragraph fluency and multi-digit arithmetic with regrouping.</li>
+            <li><strong>Holistic Well-Being (Cognitive + CASEL):</strong> In a residential ashram school, academic struggle is rarely isolated from emotional well-being. Pairing FLN scores with attendance regularity, classroom participation, and CASEL socio-emotional check-ins helps wardens and teachers spot a homesick or disengaged child early — before they drop out.</li>
+            <li><strong>Gamified Micro-Practice:</strong> Built-in interactive FLN games allow students to practice targeted concepts directly on a facilitator's tablet, turning reinforcement into play rather than test anxiety.</li>
+          </ul>
+
+          <h2>Views on Implementation: Engineering for the Last Mile</h2>
+
+          <p>
+            Software only works in rural education if it respects the physical and human constraints of the field. Four implementation realities guided how we built and deployed the platform:
+          </p>
+
+          <h3>1. Local-First as an Equity Requirement</h3>
+          <p>
+            Every school roster, diagnostic rubric, and interactive game is cached locally on the device using browser storage (IndexedDB and offline-capable web architecture). A field coordinator can walk into a zero-signal valley, assess 40 students one-on-one, and save every child's trajectory without touching the internet. Opportunistic background sync uploads batched telemetry automatically once the coordinator returns to block headquarters.
+          </p>
+
+          <h3>2. Eliminating Data Fatigue with 2-Minute Tap Rubrics</h3>
+          <p>
+            If assessing one student requires filling out a 15-field form, field teams end up spending more time typing than teaching. We stripped the interface down to a one-thumb, tap-based diagnostic flow that takes under two minutes per child — leaving more time for actual pedagogical coaching.
+          </p>
+
+          <h3>3. Low-Spec Hardware &amp; Battery Discipline</h3>
+          <p>
+            Field teams and teachers carry modest ₹7,000–₹10,000 Android tablets and phones with limited RAM and irregular charging access in remote hostels. Keeping the web bundle ultra-lightweight without heavy animations or background polling ensures smooth responsiveness and preserves battery across full-day school visits.
+          </p>
+
+          <h3>4. Data That Serves Teachers First, Bureaucrats Second</h3>
+          <p>
+            When data only flows upward to Project Officers and donors, teachers treat it as surveillance. By generating immediate, clear student groupings right on the device after an assessment, teachers immediately know which 8 students need letter-blending support tomorrow morning — turning telemetry from an audit tool into a daily teaching assistant.
+          </p>
+
+          <div class="blog-post__callout">
+            <p class="blog-post__callout-title">Building offline-first EdTech or child-tracking systems?</p>
+            <p class="blog-post__callout-text">I'd love to exchange notes on low-connectivity architecture, AI vibecoding in the social sector, and holistic assessment design.</p>
+            <a href="https://www.linkedin.com/in/vikas-choudhary-3a7a85149/" target="_blank" rel="noopener noreferrer" class="blog-post__callout-link">Discuss on LinkedIn →</a>
+          </div>
+
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <p class="footer__copy">© 2026 Vikas Choudhary</p>
+      <p class="footer__edu">B.Sc. &amp; M.A. in Hindi Literature · Kurukshetra University</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/vikas-choudhary-3a7a85149/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

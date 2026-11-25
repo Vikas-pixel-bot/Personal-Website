@@ -1037,3 +1037,210 @@ ul { list-style: none; }
     gap: 1rem;
   }
 }
+
+/* ── Audience / Perspective Switcher ───────────────────────── */
+.audience-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin: 1.5rem 0 2rem;
+  padding: 0.85rem 1.15rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+}
+
+.audience-bar__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-label);
+}
+
+.audience-bar__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.audience-tab {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 0.38rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.audience-tab:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+}
+
+.audience-tab.active {
+  color: var(--color-surface);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* ── Perspective Brief Panel ───────────────────────────────── */
+.perspective-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2.25rem;
+  animation: fadeSlideIn 0.25s ease forwards;
+}
+
+.perspective-panel[hidden] {
+  display: none;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.perspective-panel__kicker {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: 0.35rem;
+}
+
+.perspective-panel__title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+.perspective-panel__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.25rem;
+}
+
+.perspective-panel__list li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--color-text-body);
+}
+
+.perspective-panel__list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.perspective-panel__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.perspective-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  transition: var(--transition-fast);
+}
+
+.perspective-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.perspective-btn--primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-surface);
+}
+
+.perspective-btn--primary:hover {
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: var(--color-surface);
+}
+
+/* ── Blog LinkedIn Discussion Callout ──────────────────────── */
+.blog-post__callout {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+}
+
+.blog-post__callout-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.blog-post__callout-text {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.9rem !important;
+}
+
+.blog-post__callout-link {
+  display: inline-block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.blog-post__callout-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Credentials & Toolset Block ───────────────────────────── */
+.credentials-strip {
+  margin-top: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  font-size: 0.92rem;
+  color: var(--color-text-body);
+  line-height: 1.65;
+}
+
+.credentials-strip strong {
+  color: var(--color-text-primary);
+}
