@@ -20,9 +20,55 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/styles/index.css" />
 </head>
-<body>
+<body class="is-gated">
   <!-- Top Gradient Bar -->
   <div class="top-bar" aria-hidden="true"></div>
+
+  <!-- ========== ENTRY GATE (SHOWN FIRST UNTIL VISITOR SELECTS) ========== -->
+  <section class="entry-gate" id="entry-gate" aria-label="Welcome — choose your perspective">
+    <div class="entry-gate__inner">
+      <p class="entry-gate__kicker">Vikas Choudhary · Education &amp; EdTech</p>
+      <h1 class="entry-gate__title">Before we begin — how are you visiting today?</h1>
+      <p class="entry-gate__sub">
+        Select your perspective so the portfolio, experience, and areas of focus are framed around what matters most to you.
+      </p>
+
+      <div class="entry-gate__grid">
+        <button type="button" class="entry-card" data-choose-audience="recruiter">
+          <div>
+            <span class="entry-card__tag">Leadership &amp; Execution</span>
+            <h2 class="entry-card__title">Recruiter / Hiring Manager</h2>
+            <p class="entry-card__desc">
+              See why I fit your team: 60-person field leadership, 29 IAS/State PO liaison, offline AI platform builds, and measurable delivery.
+            </p>
+          </div>
+          <span class="entry-card__cta">Enter Recruiter View →</span>
+        </button>
+
+        <button type="button" class="entry-card" data-choose-audience="visitor">
+          <div>
+            <span class="entry-card__tag">Journey &amp; Field Notes</span>
+            <h2 class="entry-card__title">Visitor / Educator</h2>
+            <p class="entry-card__desc">
+              Read the honest story behind the work — from street theatre and NSS to 500 tribal residential ashram schools.
+            </p>
+          </div>
+          <span class="entry-card__cta">Enter Visitor View →</span>
+        </button>
+
+        <button type="button" class="entry-card" data-choose-audience="collaborator">
+          <div>
+            <span class="entry-card__tag">Partnerships &amp; Scale</span>
+            <h2 class="entry-card__title">Collaborator / CSR &amp; Govt.</h2>
+            <p class="entry-card__desc">
+              Explore areas where we can partner: 48-day FLN catch-up courses, offline child telemetry, CASEL SEL, and frugal STEM labs.
+            </p>
+          </div>
+          <span class="entry-card__cta">Enter Collaborator View →</span>
+        </button>
+      </div>
+    </div>
+  </section>
 
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
@@ -30,6 +76,10 @@
       <a href="#" class="navbar__logo" id="nav-logo" data-i18n="nav_logo">Vikas Choudhary</a>
 
       <div class="navbar__actions">
+        <button type="button" class="navbar__perspective" id="nav-perspective" title="Switch visitor perspective">
+          View: <strong id="nav-perspective-label">Visitor</strong> ▾
+        </button>
+
         <div class="lang-switcher" id="lang-switcher">
           <button class="lang-btn" onclick="switchLanguage('en')" data-lang="en">EN</button>
           <span class="lang-divider">/</span>
@@ -59,49 +109,7 @@
     <!-- ========== HOME / HERO ========== -->
     <section id="home" class="section section--hero">
       <div class="container">
-        <span class="section-label" data-i18n="hero_label">Program Manager · FLN Program Development &amp; EdTech</span>
-
-        <!-- Audience Perspective Switcher -->
-        <div class="audience-bar" role="tablist" aria-label="Choose your perspective">
-          <span class="audience-bar__label">I am visiting as:</span>
-          <div class="audience-bar__tabs">
-            <button type="button" class="audience-tab active" data-audience="visitor" role="tab" aria-selected="true">Visitor / Educator</button>
-            <button type="button" class="audience-tab" data-audience="recruiter" role="tab" aria-selected="false">Recruiter / Hiring</button>
-            <button type="button" class="audience-tab" data-audience="collaborator" role="tab" aria-selected="false">Collaborator / CSR</button>
-          </div>
-        </div>
-
-        <!-- Tailored Panel: Recruiter -->
-        <aside class="perspective-panel" id="panel-recruiter" hidden>
-          <p class="perspective-panel__kicker">For Hiring Managers &amp; Recruiters</p>
-          <h2 class="perspective-panel__title">Why Vikas belongs on your leadership or EdTech team</h2>
-          <ul class="perspective-panel__list">
-            <li><strong>Proven Scale &amp; People Leadership:</strong> Managing a 60-member field team across 4 Maharashtra divisions (Nashik, Thane, Nagpur, Amravati) and 500 ashram schools, with direct liaison across 29 Project Officers (17 IAS, 12 Non-IAS) and 29 APOs.</li>
-            <li><strong>Builder of Pedagogical &amp; AI Systems:</strong> Authored the 48-Day FLN Catch-Up Course (50,000+ students assessed) and vibecoded an offline-first AI student progress platform with built-in interactive FLN learning games.</li>
-            <li><strong>Frugal Innovation + Academic Rigor:</strong> Created the sub-₹2,500 Everyday Science Kit (100+ experiments across 6+ states) and CASEL Happiness Curriculum, grounded in a B.Sc. and an M.A. in Hindi Literature with Distinction.</li>
-          </ul>
-          <div class="perspective-panel__actions">
-            <a href="#work" class="perspective-btn perspective-btn--primary">View 7 Career Roles ↓</a>
-            <a href="https://www.linkedin.com/in/vikas-choudhary-3a7a85149/" target="_blank" rel="noopener noreferrer" class="perspective-btn">LinkedIn Profile ↗</a>
-            <a href="mailto:vikaschoudhary699@gmail.com" class="perspective-btn">vikaschoudhary699@gmail.com</a>
-          </div>
-        </aside>
-
-        <!-- Tailored Panel: Collaborator -->
-        <aside class="perspective-panel" id="panel-collaborator" hidden>
-          <p class="perspective-panel__kicker">For Foundations, CSR &amp; State Partners</p>
-          <h2 class="perspective-panel__title">Possible areas of collaboration</h2>
-          <ul class="perspective-panel__list">
-            <li><strong>Large-Scale FLN &amp; Catch-Up Implementation:</strong> Co-designing and rolling out 48-day TaRL + LSRW remedial sprints and CASEL-aligned socio-emotional curricula tailored to residential and government schools.</li>
-            <li><strong>Offline-First EdTech &amp; Holistic Child Tracking:</strong> Building zero-connectivity assessment engines, longitudinal student trajectories, and gamified practice tools engineered for modest ₹7,000 rural tablets.</li>
-            <li><strong>Frugal STEM &amp; Teacher Capacity Building:</strong> Deploying sub-₹2,500 hands-on NCERT science kits (100+ experiments) and classroom co-teaching cascades that teachers can sustain locally.</li>
-          </ul>
-          <div class="perspective-panel__actions">
-            <a href="#writing" class="perspective-btn perspective-btn--primary">Read Implementation Notes ↓</a>
-            <a href="https://www.linkedin.com/in/vikas-choudhary-3a7a85149/" target="_blank" rel="noopener noreferrer" class="perspective-btn">Discuss Partnership on LinkedIn ↗</a>
-            <a href="#contact" class="perspective-btn">Get in Touch</a>
-          </div>
-        </aside>
+        <span class="section-label" id="hero-label" data-i18n="hero_label">Program Manager · FLN Program Development &amp; EdTech</span>
 
         <div class="hero__photo-wrapper">
           <img
@@ -113,39 +121,39 @@
         </div>
 
         <div class="hero__bio">
-          <p data-i18n="hero_bio_1">
+          <p id="hero-bio-1" data-i18n="hero_bio_1">
             I'm a Program Manager at Pratham Education Foundation with 5+ years in education and the social sector, leading a state-level partnership with the Tribal Development Department (Government of Maharashtra) across 500 tribal residential ashram schools. My work spans everyone from Grade 1 students learning to decode their first word to 29 Project Officers (17 IAS) aligning policy and reporting.
           </p>
-          <p data-i18n="hero_bio_2">
+          <p id="hero-bio-2" data-i18n="hero_bio_2">
             Most of what I do is unglamorous: reviewing telemetry data, travelling to remote ashramshalas across Nashik, Thane, Nagpur, and Amravati, troubleshooting implementation failures, and holding honest pedagogical conversations with headmasters and wardens until learning genuinely shifts. I also build practical EdTech — including an offline-first AI student tracking platform and interactive FLN games.
           </p>
-          <p data-i18n="hero_bio_3">
+          <p id="hero-bio-3" data-i18n="hero_bio_3">
             Before this I led multi-state STEM programs at Gurushala and American India Foundation, and directed 100+ street plays with Manthan Theatre Foundation. Educated at Kurukshetra University with both a Bachelor of Science (B.Sc.) and an M.A. in Hindi Language &amp; Literature with Distinction — a combination of scientific inquiry and linguistic empathy that proves remarkably useful in the field.
           </p>
         </div>
 
         <div class="impact-stats">
           <div class="impact-stat">
-            <div class="impact-stat__number" data-i18n="stat_schools_num">500</div>
-            <div class="impact-stat__label" data-i18n="stat_schools_label">Ashram Schools</div>
+            <div class="impact-stat__number" id="stat-1-num" data-i18n="stat_schools_num">500</div>
+            <div class="impact-stat__label" id="stat-1-label" data-i18n="stat_schools_label">Ashram Schools</div>
           </div>
           <div class="impact-stat">
-            <div class="impact-stat__number" data-i18n="stat_students_num">50,000+</div>
-            <div class="impact-stat__label" data-i18n="stat_students_label">Students Assessed</div>
+            <div class="impact-stat__number" id="stat-2-num" data-i18n="stat_students_num">50,000+</div>
+            <div class="impact-stat__label" id="stat-2-label" data-i18n="stat_students_label">Students Assessed</div>
           </div>
           <div class="impact-stat">
-            <div class="impact-stat__number" data-i18n="stat_team_num">60</div>
-            <div class="impact-stat__label" data-i18n="stat_team_label">Field Staff Managed</div>
+            <div class="impact-stat__number" id="stat-3-num" data-i18n="stat_team_num">60</div>
+            <div class="impact-stat__label" id="stat-3-label" data-i18n="stat_team_label">Field Staff Managed</div>
           </div>
           <div class="impact-stat">
-            <div class="impact-stat__number" data-i18n="stat_govt_num">29 POs</div>
-            <div class="impact-stat__label" data-i18n="stat_govt_label">17 IAS · 12 Non-IAS Liaison</div>
+            <div class="impact-stat__number" id="stat-4-num" data-i18n="stat_govt_num">29 POs</div>
+            <div class="impact-stat__label" id="stat-4-label" data-i18n="stat_govt_label">17 IAS · 12 Non-IAS Liaison</div>
           </div>
         </div>
 
         <div class="now-block">
-          <div class="now-block__label" data-i18n="currently_label">Currently</div>
-          <p class="now-block__text" data-i18n="currently_text">Leading <em>Majhi Shala, Majha Swabhimaan</em> across 500 Ashram schools in Nashik, Thane, Nagpur, and Amravati. Scaling the 48-Day FLN Catch-Up Course (LSRW + TaRL), implementing a CASEL-based Happiness Curriculum, and deploying an AI-powered offline platform to track child-wise holistic growth.</p>
+          <div class="now-block__label" id="currently-label" data-i18n="currently_label">Currently</div>
+          <p class="now-block__text" id="currently-text" data-i18n="currently_text">Leading <em>Majhi Shala, Majha Swabhimaan</em> across 500 Ashram schools in Nashik, Thane, Nagpur, and Amravati. Scaling the 48-Day FLN Catch-Up Course (LSRW + TaRL), implementing a CASEL-based Happiness Curriculum, and deploying an AI-powered offline platform to track child-wise holistic growth.</p>
         </div>
 
       </div>
@@ -154,8 +162,8 @@
     <!-- ========== WORK / PORTFOLIO ========== -->
     <section id="work" class="section">
       <div class="container">
-        <span class="section-label" data-i18n="work_label">Work</span>
-        <p class="section-intro" data-i18n="work_intro">
+        <span class="section-label" id="work-label" data-i18n="work_label">Work</span>
+        <p class="section-intro" id="work-intro" data-i18n="work_intro">
           Seven roles across five years — what I've been building, field-testing, and occasionally course-correcting.
         </p>
 
@@ -166,11 +174,11 @@
               <h3 class="work-item__title" data-i18n="work_1_title">Pratham Education Foundation — Majhi Shala, Majha Swabhimaan</h3>
               <span class="work-item__date" data-i18n="work_1_date">Apr 2025 – Present</span>
             </div>
-            <p class="work-item__role" data-i18n="work_1_role">Program Manager · Nashik, Thane, Nagpur &amp; Amravati Divisions</p>
-            <p class="work-item__desc" data-i18n="work_1_desc_1">
+            <p class="work-item__role" id="work-1-role" data-i18n="work_1_role">Program Manager · Nashik, Thane, Nagpur &amp; Amravati Divisions</p>
+            <p class="work-item__desc" id="work-1-desc-1" data-i18n="work_1_desc_1">
               Leading the statewide partnership with the Tribal Development Department (Government of Maharashtra) for the holistic development of 500 Ashram schools. I direct a cross-functional field team of 60 across four administrative divisions and serve as primary liaison to 29 Project Officers (17 IAS, 12 Non-IAS) and 29 Assistant Project Officers.
             </p>
-            <p class="work-item__desc" data-i18n="work_1_desc_2">
+            <p class="work-item__desc" id="work-1-desc-2" data-i18n="work_1_desc_2">
               Developed the 48-day FLN Catch-Up Course (TaRL &amp; LSRW) implemented across 500 schools, designed a CASEL-aligned Happiness Curriculum for residential hostels, and vibecoded an AI-powered offline FLN assessment platform with built-in interactive learning games to track student-level growth in low-connectivity zones.
             </p>
             <div class="work-item__tags">
@@ -187,8 +195,8 @@
               <h3 class="work-item__title">Pratham Education Foundation — Training &amp; Capacity Development (TCD)</h3>
               <span class="work-item__date">Apr 2024 – Mar 2025</span>
             </div>
-            <p class="work-item__role">Senior Trainer, TCD · National / Multi-State Coordination</p>
-            <p class="work-item__desc">
+            <p class="work-item__role" id="work-2-role">Senior Trainer, TCD · National / Multi-State Coordination</p>
+            <p class="work-item__desc" id="work-2-desc">
               Led training oversight, real-time quality assurance, and post-session mentoring across teams. Coordinated training toolkits, assessment formats, and contextual handbooks aligned with FLN and Competency-Based Education (CBE), piloted virtual student engagement camps, and partnered with the MME team to turn field data into pedagogical improvements.
             </p>
             <div class="work-item__tags">
@@ -204,8 +212,8 @@
               <h3 class="work-item__title">Pratham Education Foundation — Gurushala (Vodafone Idea &amp; Indus Towers)</h3>
               <span class="work-item__date">Jul 2023 – Mar 2024</span>
             </div>
-            <p class="work-item__role">Master Trainer – Teacher Development · 6+ States</p>
-            <p class="work-item__desc">
+            <p class="work-item__role" id="work-3-role">Master Trainer – Teacher Development · 6+ States</p>
+            <p class="work-item__desc" id="work-3-desc">
               Designed the "Integrating Everyday Science into Classrooms" program for 500 schools across UP, Karnataka, Chhattisgarh, Arunachal Pradesh, and Telangana. Created a cost-effective science kit (under ₹2,500) enabling 100+ hands-on experiments using everyday materials and authored NCERT-mapped science manuals for Grades 6–8, travelling up to 20 days a month to support 3,500+ teachers.
             </p>
             <div class="work-item__tags">
@@ -221,8 +229,8 @@
               <h3 class="work-item__title" data-i18n="work_2_title">American India Foundation (AIF)</h3>
               <span class="work-item__date" data-i18n="work_2_date">Apr 2023 – Jul 2023</span>
             </div>
-            <p class="work-item__role" data-i18n="work_2_role">STEM Resource Person (North Region) · 10 States</p>
-            <p class="work-item__desc" data-i18n="work_2_desc">
+            <p class="work-item__role" id="work-4-role" data-i18n="work_2_role">STEM Resource Person (North Region) · 10 States</p>
+            <p class="work-item__desc" id="work-4-desc" data-i18n="work_2_desc">
               Led capacity building for 70 School Facilitators across 10 northern states on STEM and Robotics delivery. Liaised with District Primary Education Officers (DPEOs) and DIET principals on techno-pedagogy, and organized state and interstate STEM Expos showcasing student project-based learning.
             </p>
             <div class="work-item__tags">
@@ -238,8 +246,8 @@
               <h3 class="work-item__title">American India Foundation (AIF) — Digital Equalizer (IBM)</h3>
               <span class="work-item__date">Nov 2022 – Mar 2023</span>
             </div>
-            <p class="work-item__role">School Facilitator · Rural Clusters (6 Schools)</p>
-            <p class="work-item__desc">
+            <p class="work-item__role" id="work-5-role">School Facilitator · Rural Clusters (6 Schools)</p>
+            <p class="work-item__desc" id="work-5-desc">
               Delivered structured STEM, AI literacy, and Scratch block coding sessions in rural government schools for 1,200+ students with no reliable power supply and first-time computer learners. Built foundational teacher training modules so classrooms could sustain the curriculum independently.
             </p>
             <div class="work-item__tags">
@@ -254,8 +262,8 @@
               <h3 class="work-item__title" data-i18n="work_3_title">Manthan Theatre Foundation &amp; District Administration</h3>
               <span class="work-item__date" data-i18n="work_3_date">May 2019 – May 2020</span>
             </div>
-            <p class="work-item__role" data-i18n="work_3_role">Assistant Director, Awareness Programs · Theatre Artist</p>
-            <p class="work-item__desc" data-i18n="work_3_desc">
+            <p class="work-item__role" id="work-6-role" data-i18n="work_3_role">Assistant Director, Awareness Programs · Theatre Artist</p>
+            <p class="work-item__desc" id="work-6-desc" data-i18n="work_3_desc">
               Directed and performed 100+ street plays (Nukkad Natak) across 25+ villages on public health, child rights, and civic awareness alongside DLSA and local officials. Taught me that authentic communication relies on meeting communities exactly where they are.
             </p>
             <div class="work-item__tags">
@@ -270,8 +278,8 @@
               <h3 class="work-item__title" data-i18n="work_4_title">Kurukshetra University — National Service Scheme (NSS)</h3>
               <span class="work-item__date" data-i18n="work_4_date">May 2018 – May 2019</span>
             </div>
-            <p class="work-item__role" data-i18n="work_4_role">Vice President, NSS Unit</p>
-            <p class="work-item__desc" data-i18n="work_4_desc">
+            <p class="work-item__role" id="work-7-role" data-i18n="work_4_role">Vice President, NSS Unit</p>
+            <p class="work-item__desc" id="work-7-desc" data-i18n="work_4_desc">
               Mobilized 200+ student volunteers for Unnat Bharat Abhiyan surveys, Swachh Bharat internships, and rural literacy outreach. My first real exposure to coordinating people toward a shared goal in conditions where nothing is guaranteed.
             </p>
             <div class="work-item__tags">
